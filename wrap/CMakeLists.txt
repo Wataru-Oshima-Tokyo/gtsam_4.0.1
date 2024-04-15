@@ -26,7 +26,7 @@ if (NOT GTSAM_WRAP_SERIALIZATION)
   target_compile_definitions(wrap_lib PUBLIC -DWRAP_DISABLE_SERIALIZE)
 endif()
 
-target_link_libraries(wrap_lib ${WRAP_BOOST_LIBRARIES})
+target_link_libraries(wrap_lib debug ${WRAP_BOOST_LIBRARIES})
 target_include_directories(wrap_lib PUBLIC ${Boost_INCLUDE_DIR})
 
 gtsam_assign_source_folders(${wrap_srcs} ${wrap_headers})
